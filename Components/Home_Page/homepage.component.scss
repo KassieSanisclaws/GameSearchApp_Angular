@@ -1,0 +1,134 @@
+// this filters class is the wrapper around the mat component. //
+.filters {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 20px;
+  }
+// this is a selector that helps select the mat selector compoents angular material that style them. //
+  ::ng-deep {
+    .mat-form-field-infix {
+      background-color: #0e752d;
+    }
+  
+    .mat-select-value,
+    .mat-select-arrow,
+    .mat-form-field-hide-placeholder .mat-select-placeholder,
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+      color: rgb(240, 236, 243) !important; // this is the label color. //
+      opacity: 1;
+    }
+  
+    .mat-form-field-infix {
+      border-color: #fff !important;
+      border-top: none;
+      padding-left: 5px !important;
+    }
+  
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+      padding-left: 12px; // this is the margin of the sort label in the mat-sort. //
+    }
+  
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+      background-color: rgb(151, 43, 43) !important;  // this is the underline under the mat-sort.//
+    }
+  }
+
+  .games {
+    display: flex;  // this displays our boxes 2 or 3 row. //
+    flex-wrap: wrap;  // this displays our boxes 2 or 3 row. //
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+
+
+  .game {
+  width: 280px;
+  margin: 10px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #202020;
+  box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 11px 6px rgb(200 152 44 / 46%);
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: rgb(27, 26, 26);
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+// the below makes it centered on the page.//
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto; // this makes it centered/ 
+    height: 172px;
+  }
+
+  &-description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 157px;
+  }
+
+  &-name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; // this hids if the text is too long and does not break the layout. //
+  }
+
+  &-platforms {
+    display: flex;
+  }
+
+  &-platform {
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+
+.image1{
+  width: 2rem;
+  height: 2rem;
+}
+
+.image2{
+  width: 2rem;
+  height: 2rem;
+}
+
+.image3{
+  width: 2rem;
+  height: 2rem;
+}
+
+.image4{
+  width: 2rem;
+  height: 2rem;
+}
+
+.image5{
+  width: 2rem;
+  height: 2rem;
+}
+
+.image1{
+  width: 2rem;
+  height: 2rem;
+}

@@ -1,0 +1,55 @@
+
+<div class="filters">
+       <mat-form-field>
+              <mat-label>Find By Sort Type:</mat-label>
+                     <mat-select panelClass="sert-select" [(ngModel)]="sort" (selectionChange)="searchGames(sort)">
+                        
+                         <mat-option value="name">Name</mat-option>
+                         <mat-option value="-released">Released</mat-option>
+                         <mat-option value="-added">Added</mat-option>
+                         <mat-option value="-created">Created</mat-option>
+                         <mat-option value="-updated">Updated</mat-option>
+                         <mat-option value="-rating">Rating</mat-option>
+                         <mat-option value="metacritic">Metacritic</mat-option>
+
+                    </mat-select>
+              
+       </mat-form-field>
+</div>
+<!------------------------- the below are the games array generated in a loop ---------------------------------------->
+<div class="games">  
+    <ng-container *ngFor="let game of games">
+      <div class="game" (click)="openGameDetails(game.id)">
+        <div class="game-thumb-container">
+<!-------------------- the below is the images array generated from the api service connected to the open source -------------------->      
+          <img 
+           *ngIf="game .background_image"
+            src="{{ game.background_image }}"
+            alt="thumbnail"
+            class="game-thumbnail"
+          />
+        <p *ngIf="!game.background_image">No image</p>
+        </div>
+        <div class="game-description">
+          <p class="game-name">{{ game.name }}</p>
+          <div class="game-platforms">
+              <img class="image1" src="../../../assets/images/platforms/andriod_icon.png"/>
+              />
+              <img class="image2" src="../../../assets/images/platforms/nintendo_logo.png">
+              />
+              <img class="image3" src="../../../assets/images/platforms/pc_logo.png">
+              />
+              <img class="image4" src="../../../assets/images/platforms/playstation_logo.png">
+              />
+              <img class="image5" src="../../../assets/images/platforms/sega_icon.png">
+
+          <!-----   *ngFor="let gamePlatform of game.parent_platforms"            
+              class="game-platform"
+              src="../../../assets/images/platforms/ {{ gamePlatform.platform.slug }}.png"
+              alt="{{ gamePlatform.platform.slug }}"---->
+           
+          </div>
+        </div>
+      </div>
+    </ng-container> 
+  </div>
